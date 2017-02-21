@@ -4,18 +4,61 @@ using UnityEngine;
 
 namespace Wendy
 {
-    public class Response<T>
+    [System.Serializable]
+    public class Response
     {
+        public int result;
+        public string message;
+
+        public Error Error
+        {
+            get
+            {
+                return (Error)result;
+            }
+        }
+
         public bool IsSuccess
         {
             get
             {
-                return ErrorCode == 200;
+                return result == 0;
             }
         }
-
-        public int ErrorCode;
-        public Error Error;
-        public T Data;
     }
+
+    public class ListResponse<T> : Response
+    {
+        public List<T> list;
+    }
+
+    public class TokenResponse : Response
+    {
+        public string token;
+    }
+
+    public class GameUserResponse : Response
+    {
+        public GameUser UserInfo;
+    }
+
+    public class RewardResponse : Response
+    {
+        public Reward reward;
+    }
+    public class DefineCurrencyResponse : ListResponse<DefineCurrency> {}
+
+    public class OwnCurrencyResponse : ListResponse<OwnCurrency> {}
+
+    public class DefineItemResponse : ListResponse<DefineItem> {}
+
+    public class OwnItemResponse : ListResponse<OwnItem> {}
+
+    public class DefineReinforceItemResponse : ListResponse<DefineReinforceItem> {}
+
+    public class DefineUpgradeItemResponse : ListResponse<DefineUpgradeItem> {}
+
+    public class RewardSetGroupResponse : ListResponse<RewardSetGroup> {}
+
+    public class RewardGoodsGroupResponse : ListResponse<RewardGoodsGroup> {}
 }
