@@ -256,7 +256,7 @@ namespace Restifizer
                 {
                     someRequest = new UnityHTTP.Request(method, url, parameters);
                 }
-                someRequest.SetHeader("authorization", restifizerParams.GetJWTToken());
+                someRequest.SetHeader("Authorization", restifizerParams.GetJWTToken());
             }
             else
             {
