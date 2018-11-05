@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 
 namespace Wendy
 {
@@ -46,19 +44,19 @@ namespace Wendy
     {
         public Reward reward;
     }
-    public class DefineCurrencyResponse : ListResponse<DefineCurrency> {}
+    public class DefineCurrencyResponse : ListResponse<DefineCurrency> { }
 
-    public class OwnCurrencyResponse : ListResponse<OwnCurrency> {}
+    public class OwnCurrencyResponse : ListResponse<OwnCurrency> { }
 
-    public class DefineItemResponse : ListResponse<DefineItem> {}
+    public class DefineItemResponse : ListResponse<DefineItem> { }
 
-    public class OwnItemResponse : ListResponse<OwnItem> {}
+    public class OwnItemResponse : ListResponse<OwnItem> { }
 
-    public class DefineReinforceItemResponse : ListResponse<DefineReinforceItem> {}
+    public class DefineReinforceItemResponse : ListResponse<DefineReinforceItem> { }
 
-    public class DefineUpgradeItemResponse : ListResponse<DefineUpgradeItem> {}
+    public class DefineUpgradeItemResponse : ListResponse<DefineUpgradeItem> { }
 
-    public class RewardSetGroupResponse : ListResponse<RewardSetGroup> {}
+    public class RewardSetGroupResponse : ListResponse<RewardSetGroup> { }
 
-    public class RewardGoodsGroupResponse : ListResponse<RewardGoodsGroup> {}
+    public class RewardGoodsGroupResponse : ListResponse<RewardGoodsGroup> { }
 }
